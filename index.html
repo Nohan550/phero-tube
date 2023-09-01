@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,7 +12,19 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
+  <body class="px-16">
+    <header>
+      <div class="flex justify-between py-11 border-b-2 bg-base-100">
+        <div class="flex-1">
+          <img src="./icon/Logo.png" alt="" />
+        </div>
+
+        <div class=" flex-1 flex justify-between">
+          <a class="btn btn-active btn-ghost">Sort by view</a>
+          <a onclick="blog()" class="btn btn-error">Blog</a>
+        </div>
+      </div>
+    </header>
     <script src="./posts.js"></script>
   </body>
 </html>

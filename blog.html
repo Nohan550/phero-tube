@@ -1,16 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> PH Tube BLog</title>
+    <title>PH Tube BLog</title>
+    ,
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
+  <body class="py-8 px-8 bg-slate-100">
+    <h1 class="text-center text-5xl font-bold">Query</h1>
 
+    <div class="py-5">
+      <h2 class="text-2xl font-medium">1.The scope of var, let, and const :</h2>
+      <br />
 
+      <p class="text-xl font-light">
+        In JavaScript, "var", "let", and "const" are used to declare variables,
+        but they have different scopes and behaviors. Understanding their scope
+        is crucial for writing clean and error-free JavaScript code. Let's
+        discuss the scope of each: <br /><br />
 
+        <span class="font-medium">'var':</span><br /><br />
 
+        Function Scope: Variables declared with var are function-scoped, meaning
+        they are only accessible within the function in which they are declared.
+        <br />
+        Hoisting: Variables declared with var are hoisted to the top of their
+        containing function or global scope, which means they can be used before
+        they are declared, but their value will be undefined until assigned.
+        <br /><br /><br />
 
+        <span class="font-medium">'let':</span><br /><br />
 
+        Block Scope: Variables declared with let have block scope, meaning they
+        are only accessible within the block (i.e., any pair of curly braces {})
+        in which they are defined. <br />
+        Hoisting: Variables declared with let are hoisted to the top of their
+        containing block but are not initialized, so attempting to use them
+        before declaration will result in a Reference. <br /><br /><br />
+
+        <span class="font-medium">'const':</span> <br /><br />
+
+        Block Scope: Like let, variables declared with const also have block
+        scope. Constant Value: Variables declared with const must be initialized
+        with a value when declared, and this value cannot be changed or
+        reassigned after initialization. However, the object or array they
+        reference is not immutable, so their properties or elements can be
+        modified. <br />
+        Hoisting: Variables declared with const are hoisted, but they are not
+        initialized, so like let, attempting to use them before declaration
+        results in a ReferenceError.
+      </p>
+    </div>
+    <div class="py-5">
+      <h2 class="text-2xl font-medium">
+        2.The use cases of null and undefined:
+      </h2>
+      <br />
+      <p class="text-xl font-light">
+        <span class="font-medium">'null':</span> <br /><br />
+
+        Explicitly Empty Value: null is often used to represent an explicitly
+        empty value or the absence of any object value. It's typically assigned
+        to variables or properties to indicate that there is no valid object or
+        value present. <br />
+        <br />
+        Initialization: You can initialize a variable with null when you want to
+        indicate that it hasn't been assigned a meaningful value yet.
+        <br /><br /><br />
+
+        <span class="font-medium">'undefined':</span> <br /><br />
+
+        Implicitly Empty Value: 'undefined' is used to represent the absence of
+        a value or a variable that has been declared but hasn't been assigned
+        any value. It's the default value for function parameters that are not
+        provided during a function call. <br /><br />
+        Accessing Non-existent Properties: When you try to access an object
+        property that doesn't exist, the result is undefined. <br /><br />
+        Return Value: Functions that do not explicitly return a value will
+        return undefined by default.
+      </p>
+    </div>
+    <div class="py-5">
+      <h2 class="text-2xl font-medium">3.What does it mean by REST API?</h2>
+      <br />
+      <p class="text-xl font-light">
+        REST API stands for Representational State Transfer Application
+        Programming Interface. It is a set of architectural principles and
+        constraints used for designing networked applications. REST is not a
+        protocol but rather a set of guidelines and best practices for creating
+        web services that are scalable, stateless, and can be easily consumed by
+        clients. <br /><br />
+
+        Here are the key principles and characteristics of RESTful APIs:
+        <br /><br />
+
+        <span class="font-medium"> 1. Stateless:</span> Each request from a
+        client to a server must contain all the information needed to understand
+        and process the request. The server should not rely on any previous
+        requests. This makes it easier to scale the server and handle a large
+        number of clients. <br /><br />
+
+        <span class="font-medium">2. Client-Server Architecture:</span> REST
+        separates the client from the server, allowing them to evolve
+        independently. This separation of concerns makes it easier to develop
+        and maintain both client and server components. <br /><br />
+
+        <span class="font-medium">3. Uniform Interface:</span> REST APIs have a
+        consistent and uniform interface, which typically includes standard HTTP
+        methods (GET, POST, PUT, DELETE) for CRUD (Create, Read, Update, Delete)
+        operations. Resources are identified using URLs, and HTTP status codes
+        are used to indicate the result of an operation. <br /><br />
+
+        <span class="font-medium">4. Resource-Based:</span> Resources, such as
+        data objects or services, are represented as URIs (Uniform Resource
+        Identifiers). These resources can be manipulated using standard HTTP
+        methods. <br />
+        <br />
+
+        <span class="font-medium">5. Representation</span>: Resources can have
+        multiple re presentations, such as JSON, XML, HTML, or others. Clients
+        can specify their preferred representation using HTTP headers (e.g.,
+        Accept) or receive the default representation. <br /><br />
+
+        <span class="font-medium">6. Statelessness:</span> Each request from a
+        client to a server must be self-contained and not rely on any server
+        state that is not part of the request itself. Session information, if
+        needed, is typically maintained on the client side. <br />
+        <br />
+
+        <span class="font-medium">7. Layered System:</span> REST allows for a
+        layered system architecture, where various components (e.g., load
+        balancers, caching servers, security layers) can be added between the
+        client and the server without affecting the overall system's
+        functionality. <br />
+        <br />
+
+        <span class="font-medium">8. Cacheability:</span> Responses from the
+        server can be cached by clients to improve performance, provided that
+        the server indicates whether a response is cacheable or not using
+        appropriate HTTP headers. <br />
+        <br />
+
+        RESTful APIs are widely used in web development and are the foundation
+        for many web services and applications. They make it easy to build
+        scalable and interoperable systems, as they leverage the existing HTTP
+        infrastructure and are independent of programming languages and
+        platforms. Regenerate
+      </p>
+    </div>
   </body>
 </html>
